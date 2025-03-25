@@ -1,7 +1,7 @@
 version: '3.8'
 services:
   movies:
-    image: hpakala53/paytmmovies:latest
+    image: najeeb228/moviesrepo:latest
     ports:
       - "81:80"
     deploy:
@@ -13,14 +13,15 @@ services:
     deploy:
       replicas: 3
   dth:
-    image: hpakala53/paytmdth:latest
+    image: najeeb228/rechargerepo:latest
     ports:
       - "83:80"
     deploy:
       replicas: 3
   recharge:
-    image: hpakala53/paytmrecharge:latest
+    image: najeeb228/dthrepo:latest
     ports:
       - "84:80"
     deploy:
       replicas: 3
+
